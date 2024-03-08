@@ -357,7 +357,7 @@ least_pro_calcium = st.radio("Following features are present (select one if pres
                           "Hypercalciuria without serum PTH and 25 and 1,25 vitamin D levels",
                          "Nephrolithiasis with calcium stones, without serum PTH and 25 and 1,25 vitamin D levels", "None"])
 
-if high_pro_calcium in  ["Hypercalcemia plus all of the following: \n a) a normal serum PTH level; \n b) a normal or increased 1,25-OH dihydroxy vitamin D level; \n c) a low 25-OH vitamin D level",
+if high_pro_calcium in  ["Hypercalcemia plus all of the following: \n a) a normal serum PTH level; \nb) a normal or increased 1,25-OH dihydroxy vitamin D level; \nc) a low 25-OH vitamin D level",
 "Hypercalciuria plus all of the following: \na) a normal serum PTH level; \nb) a normal or increased 1,25-OH dihydroxy vitamin D level; \nc) a low 25-OH vitamin D level"]:
     pro_calcium = 3
 elif least_pro_calcium in ["Nephrolithiasis plus all of the following: \na) a normal serum PTH level; \nb) a normal or increased 1,25-OH dihydroxy vitamin D level; \nc) a low 25-OH vitamin D level",
