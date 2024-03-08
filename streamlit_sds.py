@@ -6,14 +6,14 @@ high_pro_lung = st.radio("Following features are present (select one if present)
                          ["CXR: bilateral hilar adenopathy",
                           "Chest CT: perilymphatic nodules",
                           "Chest CT: symmetrical hilar/mediastinal adenopathy",
-                          "PET/Gallium-67: mediastinal/hilar enhancement"])
+                          "PET/Gallium-67: mediastinal/hilar enhancement","None"])
 least_pro_lung = st.radio("Following features are present (select one if present): ",
                          ["CXR: diffuse infiltrates",
                           "CXR: upper lobe fibrosis",
                           "BAL: lymphocytic alveolitis",
                           "BAL: elevated CD4/CD8 ratio",
                          "PET/Gallium-67: diffuse parenchymal lung enhancement",
-                         "TBNA: lymphoid aggregates/giant cells"])
+                         "TBNA: lymphoid aggregates/giant cells","None"])
 
 if high_pro_lung in  ["CXR: bilateral hilar adenopathy",
                           "Chest CT: perilymphatic nodules",
@@ -33,7 +33,7 @@ elif least_pro_lung in ["CXR: diffuse infiltrates",
 else: 
     pro_lung = 0
 
-lung_granu = st.radio("Granuloma is present on biopsy",["Yes", "No"])
+lung_granu = st.radio("Granuloma is present on neuro biopsy",["Yes", "No"])
 
 if lung_granu == 'Yes':
     pro_lung_granu = 5
@@ -42,7 +42,7 @@ elif lung_granu == 'No':
     
 st.subheader("Neurologic")
 high_pro_neuro = st.radio("Following features are present (select one if present): ",
-                         ["Clinical syndrome consistent with granulomatous inflammation of the meninges, \n brain, ventricular (CSF) system, cranial nerves, pituitary gland, spinal cord, \ncerebral vasculature or nerve roots \nAND \nAn abnormal MRI characteristic of neurosarcoidosis, defined as exhibiting abnormal\nenhancement following the administration of gadolinium or a cerebrospinal fluid \nexam demonstrating inflammation"])
+                         ["Clinical syndrome consistent with granulomatous inflammation of the meninges, \n brain, ventricular (CSF) system, cranial nerves, pituitary gland, spinal cord, \ncerebral vasculature or nerve roots \nAND \nAn abnormal MRI characteristic of neurosarcoidosis, defined as exhibiting abnormal\nenhancement following the administration of gadolinium or a cerebrospinal fluid \nexam demonstrating inflammation","None"])
 least_pro_neuro = st.radio("Following features are present (select one if present): ",
                          ["Isolated facial palsy, negative MRI ",
                           "Clinical syndrome consistent with granulomatous inflammation of the meninges, \nbrain, ventricular (CSF) system, cranial nerves, pituitary gland, spinal cord, \ncerebral vasculature, nerve roots but without characteristic MRI or CSF findings "])
