@@ -33,7 +33,7 @@ elif least_pro_lung in ["CXR: diffuse infiltrates",
 else: 
     pro_lung = 0
 
-lung_granu = st.radio("Granuloma is present on neuro biopsy",["Yes", "No"])
+lung_granu = st.radio("Granuloma is present on lung biopsy",["Yes", "No"])
 
 if lung_granu == 'Yes':
     pro_lung_granu = 5
@@ -45,7 +45,7 @@ high_pro_neuro = st.radio("Following features are present (select one if present
                          ["Clinical syndrome consistent with granulomatous inflammation of the meninges, \n brain, ventricular (CSF) system, cranial nerves, pituitary gland, spinal cord, \ncerebral vasculature or nerve roots \nAND \nAn abnormal MRI characteristic of neurosarcoidosis, defined as exhibiting abnormal\nenhancement following the administration of gadolinium or a cerebrospinal fluid \nexam demonstrating inflammation","None"])
 least_pro_neuro = st.radio("Following features are present (select one if present): ",
                          ["Isolated facial palsy, negative MRI ",
-                          "Clinical syndrome consistent with granulomatous inflammation of the meninges, \nbrain, ventricular (CSF) system, cranial nerves, pituitary gland, spinal cord, \ncerebral vasculature, nerve roots but without characteristic MRI or CSF findings "])
+                          "Clinical syndrome consistent with granulomatous inflammation of the meninges, \nbrain, ventricular (CSF) system, cranial nerves, pituitary gland, spinal cord, \ncerebral vasculature, nerve roots but without characteristic MRI or CSF findings ", "None"])
 
 if high_pro_neuro in  ["Clinical syndrome consistent with granulomatous inflammation of the meninges, \nbrain, ventricular (CSF) system, cranial nerves, pituitary gland, spinal cord, \ncerebral vasculature or nerve roots \nAND \nAn abnormal MRI characteristic of neurosarcoidosis, defined as exhibiting abnormal\nenhancement following the administration of gadolinium or a cerebrospinal fluid \nexam demonstrating inflammation"]:
     pro_neuro = 3
@@ -55,7 +55,7 @@ elif least_pro_neuro in ["Isolated facial palsy, negative MRI ",
 else: 
     pro_neuro = 0
 
-neuro_granu = st.radio("Granuloma is present on biopsy",["Yes", "No"])
+neuro_granu = st.radio("Granuloma is present on neuro biopsy",["Yes", "No"])
 
 if neuro_granu == 'Yes':
     pro_neuro_granu = 5
@@ -66,7 +66,7 @@ st.subheader("Non thoracic lymph nodes")
 
 least_pro_lymph = st.radio("Following features are present (select one if present): ",
                          ["Multiple enlarged palpable cervical or epitrochlear lymph nodes without B symptoms",
-                          "Enlarged lymph nodes identified by imaging in at least 2 peripheral or visceral lymph \nnode stations without B symptoms "])
+                          "Enlarged lymph nodes identified by imaging in at least 2 peripheral or visceral lymph \nnode stations without B symptoms ", "None"])
 
 if least_pro_lymph in ["Multiple enlarged palpable cervical or epitrochlear lymph nodes without B symptoms",
                           "Enlarged lymph nodes identified by imaging in at least 2 peripheral or visceral lymph \nnode stations without B symptoms "] :
@@ -74,7 +74,7 @@ if least_pro_lymph in ["Multiple enlarged palpable cervical or epitrochlear lymp
 else: 
     pro_lymph = 0
 
-lymph_granu = st.radio("Granuloma is present on biopsy",["Yes", "No"])
+lymph_granu = st.radio("Granuloma is present on lymph node biopsy",["Yes", "No"])
 
 if lymph_granu == 'Yes':
     pro_lymph_granu = 5
@@ -86,7 +86,7 @@ st.subheader("Kidney")
 
 least_pro_kidney = st.radio("Following features are present (select one if present): ",
                          ["Treatment-responsive renal failure with no other risk factors.",
-                          "Treatment-responsive renal failure in patient with diabetes and/or hypertension."])
+                          "Treatment-responsive renal failure in patient with diabetes and/or hypertension.", "None"])
 
 if least_pro_kidney in ["Treatment-responsive renal failure with no other risk factors.",
                           "Treatment-responsive renal failure in patient with diabetes and/or hypertension."] :
@@ -94,7 +94,7 @@ if least_pro_kidney in ["Treatment-responsive renal failure with no other risk f
 else: 
     pro_kidney = 0
 
-kidney_granu = st.radio("Granuloma is present on biopsy",["Yes", "No"])
+kidney_granu = st.radio("Granuloma is present on kidney biopsy",["Yes", "No"])
 
 if kidney_granu == 'Yes':
     pro_kidney_granu = 5
@@ -113,7 +113,7 @@ least_pro_heart = st.radio("Following features are present (select one if presen
                          "Delayed enhancement on CMR ",
                          "Positive gallium uptake",
                          "Defect on perfusion scintigraphy or SPECT scan",
-                         "T2 prolongation on CMR"])
+                         "T2 prolongation on CMR", "None"])
 
 if least_pro_heart in ["Treatment responsive CM or AVNB",
                           "Reduced LVEF in the absence of other clinical risk factors",
@@ -128,7 +128,7 @@ if least_pro_heart in ["Treatment responsive CM or AVNB",
 else: 
     pro_heart = 0
 
-heart_granu = st.radio("Granuloma is present on biopsy",["Yes", "No"])
+heart_granu = st.radio("Granuloma is present on cardiac biopsy",["Yes", "No"])
 
 if heart_granu == 'Yes':
     pro_heart_granu = 5
@@ -137,11 +137,11 @@ elif heart_granu == 'No':
 
 st.subheader("Skin")
 high_pro_skin = st.radio("Following features are present (select one if present): ",
-                         ["Lupus pernio"])
+                         ["Lupus pernio", "None"])
 least_pro_skin = st.radio("Following features are present (select one if present): ",
                          ["Subcutaneous nodules or plaques Inflammatory papules within a scar or tattoo",
                           "Violaceous or erythematous annular lesions",
-                         "Violaceous or erythematous macular, papular lesions around the eyes, nose, or mouth"])
+                         "Violaceous or erythematous macular, papular lesions around the eyes, nose, or mouth", "None"])
 
 if high_pro_skin in  ["Lupus pernio"]:
     pro_skin = 3
@@ -152,7 +152,7 @@ elif least_pro_skin in ["Subcutaneous nodules or plaques Inflammatory papules wi
 else: 
     pro_skin = 0
 
-skin_granu = st.radio("Granuloma is present on biopsy",["Yes", "No"])
+skin_granu = st.radio("Granuloma is present on skin biopsy",["Yes", "No"])
 
 if skin_granu == 'Yes':
     pro_skin_granu = 5
@@ -166,7 +166,7 @@ high_pro_eye = st.radio("Following features are present (select one if present):
                          "Optic neuritis",
                          "Mutton fat keratic precipitates ",
                           "Iris nodules",
-                         "Snowball/string of pearls (pars planitis)"])
+                         "Snowball/string of pearls (pars planitis)", "None"])
 least_pro_eye = st.radio("Following features are present (select one if present): ",
                          ["Lacrimal gland swelling ",
                           "Trabecular meshwork nodules",
@@ -174,7 +174,7 @@ least_pro_eye = st.radio("Following features are present (select one if present)
                          "Scleritis",
                          "Multiple chorioretinal peripheral lesions",
                          "Adnexal nodularity",
-                         "Candle wax drippings"])
+                         "Candle wax drippings", "None"])
 
 if high_pro_eye in  ["Uveitis",
                          "Optic neuritis",
@@ -193,7 +193,7 @@ elif least_pro_eye in ["Lacrimal gland swelling ",
 else: 
     pro_eye = 0
 
-eye_granu = st.radio("Granuloma is present on biopsy",["Yes", "No"])
+eye_granu = st.radio("Granuloma is present on eye biopsy",["Yes", "No"])
 
 if eye_granu == 'Yes':
     pro_eye_granu = 5
@@ -206,7 +206,7 @@ st.subheader("Liver")
 least_pro_liver = st.radio("Following features are present (select one if present): ",
                          ["Abdominal imaging demonstrating hepatomegaly",
                           "Abdominal imaging demonstrating hepatic nodules",
-                         "Alkaline phosphatase >3 times ULN"])
+                         "Alkaline phosphatase >3 times ULN", "None"])
 
 if least_pro_liver in ["Abdominal imaging demonstrating hepatomegaly",
                           "Abdominal imaging demonstrating hepatic nodules",
@@ -215,7 +215,7 @@ if least_pro_liver in ["Abdominal imaging demonstrating hepatomegaly",
 else: 
     pro_liver = 0
 
-liver_granu = st.radio("Granuloma is present on biopsy",["Yes", "No"])
+liver_granu = st.radio("Granuloma is present on liver biopsy",["Yes", "No"])
 
 if liver_granu == 'Yes':
     pro_liver_granu = 5
@@ -225,14 +225,14 @@ elif liver_granu == 'No':
 st.subheader("Bone marrow")
 
 least_pro_bone = st.radio("Following features are present (select one if present): ",
-                         ["Diffuse PET uptake"])
+                         ["Diffuse PET uptake", "None"])
 
 if least_pro_bone in ["Diffuse PET uptake"] :
     pro_bone = 2
 else: 
     pro_bone = 0
 
-bone_granu = st.radio("Granuloma is present on biopsy",["Yes", "No"])
+bone_granu = st.radio("Granuloma is present on bone marrow biopsy",["Yes", "No"])
 
 if bone_granu == 'Yes':
     pro_bone_granu = 5
@@ -244,7 +244,7 @@ st.subheader("Spleen")
 least_pro_spleen = st.radio("Following features are present (select one if present): ",
                          ["Low attenuation nodules on CT",
                           "PET/gallium-67 uptake in splenic nodules ",
-                         "Splenomegaly on imaging or physical examination"])
+                         "Splenomegaly on imaging or physical examination", "None"])
 
 if least_pro_spleen in ["Low attenuation nodules on CT",
                           "PET/gallium-67 uptake in splenic nodules ",
@@ -253,7 +253,7 @@ if least_pro_spleen in ["Low attenuation nodules on CT",
 else: 
     pro_spleen = 0
 
-spleen_granu = st.radio("Granuloma is present on biopsy",["Yes", "No"])
+spleen_granu = st.radio("Granuloma is present on spleen biopsy",["Yes", "No"])
 
 if spleen_granu == 'Yes':
     pro_spleen_granu = 5
@@ -262,11 +262,11 @@ elif spleen_granu == 'No':
 
 st.subheader("Joints")
 high_pro_joint = st.radio("Following features are present (select one if present): ",
-                         ["Typical radiographic features (trabecular pattern, osteolysis, cysts/punched out lesions)"])
+                         ["Typical radiographic features (trabecular pattern, osteolysis, cysts/punched out lesions)", "None"])
 least_pro_joint = st.radio("Following features are present (select one if present): ",
                          ["Dactylitis ",
                           "Nodular tenosynovitis ",
-                         "Positive PET, MRI, or gallium-67 bone imaging "
+                         "Positive PET, MRI, or gallium-67 bone imaging ", "None"
                          ])
 
 if high_pro_joint in  ["Typical radiographic features (trabecular pattern, osteolysis, cysts/punched out lesions)"]:
@@ -279,7 +279,7 @@ elif least_pro_joint in ["Dactylitis ",
 else: 
     pro_joint = 0
 
-joint_granu = st.radio("Granuloma is present on biopsy",["Yes", "No"])
+joint_granu = st.radio("Granuloma is present on joint biopsy",["Yes", "No"])
 
 if joint_granu == 'Yes':
     pro_joint_granu = 5
@@ -290,7 +290,7 @@ st.subheader("ENT")
 
 least_pro_ENT = st.radio("Following features are present (select one if present): ",
                          ["Granulomatous changes on direct laryngoscopy  ",
-                          "Consistent imaging studies (e.g. sinonasal erosion, mucoperiosteal thickening, positive PET scan) "])
+                          "Consistent imaging studies (e.g. sinonasal erosion, mucoperiosteal thickening, positive PET scan) ", "None"])
 
 if least_pro_ENT in ["Granulomatous changes on direct laryngoscopy  ",
                           "Consistent imaging studies (e.g. sinonasal erosion, mucoperiosteal thickening, positive PET scan) "] :
@@ -298,7 +298,7 @@ if least_pro_ENT in ["Granulomatous changes on direct laryngoscopy  ",
 else: 
     pro_ENT = 0
 
-ENT_granu = st.radio("Granuloma is present on biopsy",["Yes", "No"])
+ENT_granu = st.radio("Granuloma is present on ENT biopsy",["Yes", "No"])
 
 if ENT_granu == 'Yes':
     pro_ENT_granu = 5
@@ -309,10 +309,10 @@ elif ENT_granu == 'No':
 st.subheader("Salivary glands")
 high_pro_salivary = st.radio("Following features are present (select one if present): ",
                          ["Positive gallium-67 scan (“Panda sign”) ",
-                         "Positive PET scan of the parotid glands "])
+                         "Positive PET scan of the parotid glands ", "None"])
 least_pro_salivary = st.radio("Following features are present (select one if present): ",
                          ["Symmetrical parotitis with syndrome of mumps",
-                          "Enlarged salivary glands"])
+                          "Enlarged salivary glands", "None"])
 
 if high_pro_salivary in  ["Positive gallium-67 scan (“Panda sign”) ",
                          "Positive PET scan of the parotid glands "]:
@@ -323,7 +323,7 @@ elif least_pro_salivary in ["Symmetrical parotitis with syndrome of mumps",
 else: 
     pro_salivary = 0
 
-salivary_granu = st.radio("Granuloma is present on biopsy",["Yes", "No"])
+salivary_granu = st.radio("Granuloma is present on salivary gland biopsy",["Yes", "No"])
 
 if salivary_granu == 'Yes':
     pro_salivary_granu = 5
@@ -333,7 +333,7 @@ elif salivary_granu == 'No':
 st.subheader("Muscles")
 least_pro_muscle = st.radio("Following features are present (select one if present): ",
                          ["Positive imaging (MRI, Gallium-67) ",
-                          "Palpable muscle masses"])
+                          "Palpable muscle masses", "None"])
 
 if least_pro_muscle in ["Positive imaging (MRI, Gallium-67) ",
                           "Palpable muscle masses"] :
@@ -341,7 +341,7 @@ if least_pro_muscle in ["Positive imaging (MRI, Gallium-67) ",
 else: 
     pro_muscle = 0
 
-muscle_granu = st.radio("Granuloma is present on biopsy",["Yes", "No"])
+muscle_granu = st.radio("Granuloma is present on muscle biopsy",["Yes", "No"])
 
 if muscle_granu == 'Yes':
     pro_muscle_granu = 5
@@ -351,11 +351,11 @@ elif muscle_granu == 'No':
 st.subheader("Calcium")
 high_pro_calcium = st.radio("Following features are present (select one if present): ",
                          ["Hypercalcemia plus all of the following: \na) a normal serum PTH level; \nb) a normal or increased 1,25-OH dihydroxy vitamin D level; \nc) a low 25-OH vitamin D level",
-                         "Hypercalciuria plus all of the following: \na) a normal serum PTH level; \nb) a normal or increased 1,25-OH dihydroxy vitamin D level; \nc) a low 25-OH vitamin D level"])
+                         "Hypercalciuria plus all of the following: \na) a normal serum PTH level; \nb) a normal or increased 1,25-OH dihydroxy vitamin D level; \nc) a low 25-OH vitamin D level", "None"])
 least_pro_calcium = st.radio("Following features are present (select one if present): ",
                          ["Nephrolithiasis plus all of the following: \n a) a normal serum PTH level; \nb) a normal or increased 1,25-OH dihydroxy vitamin D level; \nc) a low 25-OH vitamin D level",
                           "Hypercalciuria without serum PTH and 25 and 1,25 vitamin D levels",
-                         "Nephrolithiasis with calcium stones, without serum PTH and 25 and 1,25 vitamin D levels"])
+                         "Nephrolithiasis with calcium stones, without serum PTH and 25 and 1,25 vitamin D levels", "None"])
 
 if high_pro_calcium in  ["Hypercalcemia plus all of the following: \n a) a normal serum PTH level; \n b) a normal or increased 1,25-OH dihydroxy vitamin D level; \n c) a low 25-OH vitamin D level",
 "Hypercalciuria plus all of the following: \na) a normal serum PTH level; \nb) a normal or increased 1,25-OH dihydroxy vitamin D level; \nc) a low 25-OH vitamin D level"]:
@@ -367,13 +367,6 @@ elif least_pro_calcium in ["Nephrolithiasis plus all of the following: \na) a no
 else: 
     pro_calcium = 0
 
-calcium_granu = st.radio("Granuloma is present on biopsy",["Yes", "No"])
-
-if calcium_granu == 'Yes':
-    pro_calcium_granu = 5
-elif calcium_granu == 'No':
-    pro_calcium_granu = 0
-
 st.subheader("Lofgren")
 lofgren = st.radio("Lofgren is present", ["Yes", "No"])
 if lofgren == "Yes":
@@ -381,7 +374,7 @@ if lofgren == "Yes":
 else: 
     pro_lofgren = 0
     
-SDS_biopsy = pro_lung+pro_lung_granu+pro_neuro+pro_neuro_granu+pro_lymph+pro_lymph_granu+pro_kidney+pro_kidney_granu+pro_heart+pro_heart_granu+pro_skin+pro_skin_granu+pro_eye+pro_eye_granu+pro_liver+pro_liver_granu+pro_bone+pro_bone_granu+pro_spleen+pro_spleen_granu+pro_joint+pro_joint_granu+pro_ENT+pro_ENT_granu+pro_salivary+pro_salivary_granu+pro_muscle+pro_muscle_granu+pro_calcium+pro_calcium_granu+lofgren
+SDS_biopsy = pro_lung+pro_lung_granu+pro_neuro+pro_neuro_granu+pro_lymph+pro_lymph_granu+pro_kidney+pro_kidney_granu+pro_heart+pro_heart_granu+pro_skin+pro_skin_granu+pro_eye+pro_eye_granu+pro_liver+pro_liver_granu+pro_bone+pro_bone_granu+pro_spleen+pro_spleen_granu+pro_joint+pro_joint_granu+pro_ENT+pro_ENT_granu+pro_salivary+pro_salivary_granu+pro_muscle+pro_muscle_granu+pro_calcium+lofgren
 SDS_clinical = pro_lung+pro_neuro+pro_lymph+pro_kidney+pro_heart+pro_skin+pro_eye+pro_liver+pro_bone+pro_spleen+pro_joint+pro_ENT+pro_salivary+pro_muscle+pro_calcium
 
 st.write("SDS clinical is: ", SDS_clinical)
