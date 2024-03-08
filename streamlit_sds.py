@@ -374,7 +374,7 @@ if lofgren == "Yes":
 else: 
     pro_lofgren = 0
     
-SDS_biopsy = pro_lung+pro_lung_granu+pro_neuro+pro_neuro_granu+pro_lymph+pro_lymph_granu+pro_kidney+pro_kidney_granu+pro_heart+pro_heart_granu+pro_skin+pro_skin_granu+pro_eye+pro_eye_granu+pro_liver+pro_liver_granu+pro_bone+pro_bone_granu+pro_spleen+pro_spleen_granu+pro_joint+pro_joint_granu+pro_ENT+pro_ENT_granu+pro_salivary+pro_salivary_granu+pro_muscle+pro_muscle_granu+pro_calcium+lofgren
+SDS_biopsy = pro_lung+pro_lung_granu+pro_neuro+pro_neuro_granu+pro_lymph+pro_lymph_granu+pro_kidney+pro_kidney_granu+pro_heart+pro_heart_granu+pro_skin+pro_skin_granu+pro_eye+pro_eye_granu+pro_liver+pro_liver_granu+pro_bone+pro_bone_granu+pro_spleen+pro_spleen_granu+pro_joint+pro_joint_granu+pro_ENT+pro_ENT_granu+pro_salivary+pro_salivary_granu+pro_muscle+pro_muscle_granu+pro_calcium+pro_lofgren
 SDS_clinical = pro_lung+pro_neuro+pro_lymph+pro_kidney+pro_heart+pro_skin+pro_eye+pro_liver+pro_bone+pro_spleen+pro_joint+pro_ENT+pro_salivary+pro_muscle+pro_calcium
 
 st.write("SDS clinical is: ", SDS_clinical)
