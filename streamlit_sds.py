@@ -388,11 +388,11 @@ elif SDS_clinical <3:
     st.write("Sarcoidosis less likely")
 else:
     biopsy_decision = st.radio("Was biopsy performed?",["Yes, consistent with sarcoidosis","No", "Yes and negative"])
-    if biopsy_decision == "No":
+    if biopsy_decision == "No" or biopsy_decision == "Yes and negative":
         if SDS_clinical>4:
             st.write('Sarcoidosis is probable')
         else: 
-            st.write('Observe')
+            st.write('Observe')      
     else:
         st.write('Sarcoidosis likely')
 
