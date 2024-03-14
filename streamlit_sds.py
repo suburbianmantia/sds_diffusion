@@ -1,6 +1,6 @@
 import streamlit as st
 st.title("SDS Clinical and SDS Biopsy for sarcoidosis diagnosis")
-st.markdown("Here is a free implementation of the SDS score for sarcoidosis diagnosis")
+st.markdown("Here is a free implementation of the SDS score for sarcoidosis diagnosis from Jeny et al. *AJRCCM* 2023")
 st.subheader("Lung")
 high_pro_lung = st.radio("Following features are present (select one if present): ",
                          ["None","CXR: bilateral hilar adenopathy",
